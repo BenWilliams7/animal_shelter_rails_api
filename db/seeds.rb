@@ -2,7 +2,7 @@ class Seed
 
   def self.begin
     seed = Seed.new
-    seed.generate_quotes
+    seed.generate_animals
   end
 
   def generate_animals
