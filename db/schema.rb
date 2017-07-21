@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 20170721172303) do
   create_table "animals", force: :cascade do |t|
     t.string "name"
     t.string "breed"
+    t.integer "age"
+    t.boolean "available", default: true
   end
 
 end
