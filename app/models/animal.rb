@@ -1,3 +1,6 @@
 class Animal <ApplicationRecord
   validates_presence_of :name
-end  
+  validates_presence_of :breed
+  validates_presence_of :available
+
+end

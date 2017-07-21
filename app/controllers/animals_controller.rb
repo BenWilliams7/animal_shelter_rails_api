@@ -33,6 +33,11 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def random
+    @animal = Animal.all.sample
+    json_response(@animal)
+  end
+
   private
   def json_response(object, status = :ok)
     render json: object, status: status
