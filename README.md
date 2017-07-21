@@ -15,6 +15,8 @@
 #### get /random
   returns a random cats
 
+#### get /search?search=[:name]  
+  returns cats whose names match the search term
 ## Setup
 Clone the repo
 #### In terminal run:
