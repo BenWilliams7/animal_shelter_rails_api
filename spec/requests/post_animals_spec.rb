@@ -1,17 +1,21 @@
 require 'rails_helper'
 
-describe "post a animal route", :type => :request do
+describe "post an animal route", :type => :request do
 
   before do
-    post '/animals', params: { :name => 'Wowzer', :breed => 'Abyssinian' }
+    post '/animals', params: { :name => 'Wowzer', :breed => 'Abyssinian', :available => true }
   end
 
-  it 'returns the name name' do
+  it 'returns the name' do
     expect(JSON.parse(response.body)['name']).to eq('Wowzer')
   end
 
-  it 'returns the animal content' do
+  it 'returns the animal breed' do
     expect(JSON.parse(response.body)['breed']).to eq('Abyssinian')
+  end
+
+  it 'returns the animal availability' do
+    expect(JSON.parse(response.body)['available']).to eq(true)
   end
 
   it 'returns a created status' do
