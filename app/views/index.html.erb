@@ -1,0 +1,15 @@
+<h1>Animals</h1>
+<hr />
+<% @animals.each do |animal| %>
+  <h2><%= animal.name %></h2>
+  <p>
+  <%= animal.breed %>
+  </p>
+  <p>
+  <%= animal.age %>
+  </p>
+
+<% end %>
+<hr />
+<%= paginate @animals %>
+<%= page_entries_info @animals %>

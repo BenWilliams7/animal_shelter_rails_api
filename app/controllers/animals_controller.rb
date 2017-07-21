@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
 
   def index
-    @animals = {"animal": "Look at the cute kitty!"}
+    @animals = Animal.page(params[:page]).per(10)
     json_response(@animals)
   end
 
