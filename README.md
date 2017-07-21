@@ -15,7 +15,7 @@
 #### get /random
   returns a random cats
 
-##Setup
+## Setup
 Clone the repo
 #### In terminal run:
 bundle install
@@ -25,12 +25,12 @@ rails s
 localhost:3000
 
 
-##Technologies
+## Technologies
 Rails
 Ruby
 Rspec
 Faker
 FactoryGirl
 
-##License
+## License
 Free use under the MIT license
