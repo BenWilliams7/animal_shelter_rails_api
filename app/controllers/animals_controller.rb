@@ -39,7 +39,7 @@ class AnimalsController < ApplicationController
   end
 
   def search
-    @animal = Animal.search(params[:search])
+    @animal = Animal.find(:all, :conditions => ['name LIKE ?', '%#{params[:search]}%'])
     json_response(@animal)
 
   end

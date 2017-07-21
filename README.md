@@ -1,24 +1,36 @@
-# README
+# Cat Shelter API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### The cat shelter API is a RESTful API that returns the names, breeds, ages, and availabilities of cats in JSON format.
 
-Things you may want to cover:
+### By Ben Williams
 
-* Ruby version
+# Endpoints
 
-* System dependencies
+#### get /animals
+ returns page 1 of cats (currently set to 100 cats (for testing purrrposes), which is all of them)
 
-* Configuration
+#### get /animals/page/2
+ returns the second page of cats (currently an empty array as only 20 cats are seed)
 
-* Database creation
+#### get /random
+  returns a random cats
 
-* Database initialization
+##Setup
+Clone the repo
+#### In terminal run:
+bundle install
+rails db:setup
+rails s
+#### Navigate to:
+localhost:3000
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+##Technologies
+Rails
+Ruby
+Rspec
+Faker
+FactoryGirl
 
-* Deployment instructions
-
-* ...
+##License
+Free use under the MIT license
