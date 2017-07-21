@@ -38,6 +38,12 @@ class AnimalsController < ApplicationController
     json_response(@animal)
   end
 
+  def search
+    @animal = Animal.search(params[:search])
+    json_response(@animal)
+
+  end
+
   private
   def json_response(object, status = :ok)
     render json: object, status: status

@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   end
 
   get 'random', to: 'animals#random'
+  get 'search', to: 'animals#search'
+
 end
