@@ -39,8 +39,7 @@ class AnimalsController < ApplicationController
   end
 
   def search
-    searched = params[:name]
-    @animals = Animal.all.where({name: searched})
+    @animals = Animal.all.name_search(params[:name])
     json_response(@animal)
 
   end
